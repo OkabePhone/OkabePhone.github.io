@@ -2,23 +2,30 @@
 
 <body id="body" style="background-color: black;" background="imgs/Moeka_Kiryu_Portrait.webp">
     <header>
-        <h1 style="text-align: center;">OKABE PHONE ПОБЕДА</h1>
-        <p style="text-align: center;">Организация никогда не была так близка к поражению с нашим гаджетом будущего!</p>
+        <h1 style="text-align: center;-webkit-text-stroke: 1px white;font-family:Impact;"><a style="text-decoration: none;" href="https://github.com/Nergon123/Okabe_Phone">OKABE PHONE</a> ПОБЕДА</h1>
+        <h2 style="text-align: center;-webkit-text-stroke: 1px white;">Организация никогда не была так близка к поражению с нашим гаджетом будущего!</p>
 
     </header>
-    <div>
-
-    </div>
+    <h1 id="victoryText" style="text-align: center;-webkit-text-stroke: 1px white;">ОКАБЕФОН ПОБЕДА УЖЕ - - - </h1>
     <div style="display:flex;justify-content: center;">
         <img class="mainImage" src="imgs/mayuri.webp">
         <img class="mainImage" src="imgs/phonefes.jpg">
         <img class="mainImage"  src="imgs/okabe.avif">
     </div>
-    <div>
+    <br>
+    <img style="display:flex;margin-left:auto;margin-right:auto;" src="imgs/OkP.gif">
+    <div style="background-color: #00000099;color:white">
         <h2 style="text-align: center;">Почему Окабефон это победа?</h2>
         <ul>
-            <li></li>
+            <li>почти Полноценный телефон</li>
+            <li>Есть возможность совершать звонки</li>
+            <li>Можно отправлять ДМЕЙЛЫ!!! (смс)</li>
+            <li>ДМЕЙЛЫ можно отправлять в ПРОШЛОЕ!!! (если ктото сделает микроволновку подходящую...)</li>
+            <li>Можно поменять обои на главном экране</li>
+            <li>...и многое другое</li>
         </ul>
+        <br>
+        
     </div>
 </body>
 <style>
@@ -80,5 +87,23 @@
 
         return "#" + r + g + b;
     }
+
+    function calculateYearsSince(startDate) {
+            const now = new Date();
+            const diff = now - startDate;
+            const millisecondsInYear = 365.25 * 24 * 60 * 60 * 1000;
+            return diff / millisecondsInYear;
+        }
+
+        function updateVictoryText() {
+            const startDate = new Date('2024-07-16T00:00:00Z');
+            const years = calculateYearsSince(startDate);
+            const yearsFormatted = years.toFixed(9);
+            document.getElementById('victoryText').textContent = `ОКАБЕФОН ПОБЕДА УЖЕ ${yearsFormatted} ЛЕТ`;
+        }
+
+        setInterval(updateVictoryText, 10); 
+
+        updateVictoryText();
 </script>
 <audio autoplay="true"></audio>
